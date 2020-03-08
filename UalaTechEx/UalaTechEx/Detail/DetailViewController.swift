@@ -26,6 +26,7 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Detalles del libro"
         setup()
     }
     
@@ -36,9 +37,6 @@ class DetailViewController: UIViewController {
         authorLabel.text = detailViewModel?.author()
         availabilityLabel.text = detailViewModel?.availability()
         popularityLabel.text = detailViewModel?.popularity()
-        
-        
-        
     }
 
 

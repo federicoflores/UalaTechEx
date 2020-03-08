@@ -18,9 +18,17 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Bienvenido a la biblioteca Ualá"
+        
+        
+
+        let button1 = UIBarButtonItem(image: UIImage(named: "upDown"), style: .done, target: self, action: #selector(logoutUser))
+        
+        self.navigationItem.rightBarButtonItem  = button1
+
         setSpinner()
         registerTableView()
-        self.title = "Bienvenido a la biblioteca Ualá"
+        
         viewModel = HomeViewModel(with: UalaProvider())
         
         guard let vm = viewModel else { return }
@@ -30,6 +38,13 @@ class HomeViewController: UIViewController {
             self.booksTableView.isHidden = false
             self.booksTableView.reloadData()
         }
+    }
+    
+    @objc private func logoutUser(){
+        guard let vm = viewModel else { return }
+        vm.books = vm.sortByPopularity(books: vm.books)
+        booksTableView.reloadData()
+        
     }
     
     private func setSpinner(){

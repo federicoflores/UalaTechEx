@@ -11,6 +11,8 @@ import Foundation
 class HomeViewModel {
     var ualaProvider: UalaProvider
     var books = [Book]()
+    var isSortedAscending = false
+    
     
     init(with provider: UalaProvider) {
         self.ualaProvider = provider
@@ -23,6 +25,7 @@ class HomeViewModel {
     func getBooksAndUpdateView(updateView: @escaping ()->()){
         fetchBooks(completion: { (books) in
             self.books = self.sortByPopularity(books: books)
+            self.isSortedAscending = true
             updateView()
         }, fail: { (fail) in
             print(fail)
@@ -31,12 +34,24 @@ class HomeViewModel {
     }
     
     func sortByPopularity(books: [Book]) -> [Book]{
+        if isSortedAscending {
         var sortedBooks: [Book] = []
         sortedBooks = books.sorted { (book1, book2) -> Bool in
-            book1.popularity > book2.popularity
+            book1.popularity < book2.popularity
         }
+            isSortedAscending = false
         return sortedBooks
+        } else {
+            var sortedBooks: [Book] = []
+            sortedBooks = books.sorted { (book1, book2) -> Bool in
+                book1.popularity > book2.popularity
+            }
+            isSortedAscending = true
+            return sortedBooks
+        }
     }
+    
+    
     
     
     
