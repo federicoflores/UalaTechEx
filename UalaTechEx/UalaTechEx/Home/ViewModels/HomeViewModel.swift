@@ -9,9 +9,10 @@
 import Foundation
 
 class HomeViewModel {
-    var ualaProvider: UalaProvider
+    private var ualaProvider: UalaProvider
     var books = [Book]()
-    var isSortedAscending = false
+    var auxAllBooks = [Book]()
+    private var isSortedAscending = false
     
     
     init(with provider: UalaProvider) {
@@ -24,6 +25,8 @@ class HomeViewModel {
     
     func getBooksAndUpdateView(updateView: @escaping ()->()){
         fetchBooks(completion: { (books) in
+            self.auxAllBooks = books
+            self.books = self.auxAllBooks
             self.books = self.sortByPopularity(books: books)
             self.isSortedAscending = true
             updateView()
@@ -51,8 +54,22 @@ class HomeViewModel {
         }
     }
     
-    
-    
-    
+    func isAvailable(){
+        books = auxAllBooks
+        books = books.filter { (book) -> Bool in
+            book.available
+        }
+    }
+        
+    func isNotAvailable(){
+        books = auxAllBooks
+        books = books.filter { (book) -> Bool in
+            !book.available
+            }
+        }
+        
+        func bothAvailability(){
+            books = auxAllBooks
+        }
     
 }

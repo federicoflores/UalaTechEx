@@ -20,9 +20,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         self.title = "Bienvenido a la biblioteca Ualá"
         
-        
-
-        let button1 = UIBarButtonItem(image: UIImage(named: "upDown"), style: .done, target: self, action: #selector(logoutUser))
+        let button1 = UIBarButtonItem(image: UIImage(named: "upDown2"), style: .done, target: self, action: #selector(sortByPopularityTapped))
         
         self.navigationItem.rightBarButtonItem  = button1
 
@@ -40,7 +38,7 @@ class HomeViewController: UIViewController {
         }
     }
     
-    @objc private func logoutUser(){
+    @objc private func sortByPopularityTapped(){
         guard let vm = viewModel else { return }
         vm.books = vm.sortByPopularity(books: vm.books)
         booksTableView.reloadData()
@@ -67,7 +65,22 @@ class HomeViewController: UIViewController {
         booksTableView.rowHeight = UITableView.automaticDimension
         
     }
-
+    
+    @IBAction func availableButtonTapped(_ sender: Any) {
+        viewModel?.isAvailable()
+        self.booksTableView.reloadData()
+    }
+    
+    @IBAction func notAvailableButtonTapped(_ sender: Any) {
+        viewModel?.isNotAvailable()
+        self.booksTableView.reloadData()
+    }
+    
+    @IBAction func everyAvailabilityButtonTapped(_ sender: Any) {
+        viewModel?.bothAvailability()
+        self.booksTableView.reloadData()
+    }
+    
 
     
 }

@@ -12,15 +12,15 @@ import Kingfisher
 
 class BookTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
     
-    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet private weak var authorLabel: UILabel!
     
-    @IBOutlet weak var availabilityLabel: UILabel!
+    @IBOutlet private weak var availabilityLabel: UILabel!
     
-    @IBOutlet weak var popularityLabel: UILabel!
+    @IBOutlet private weak var popularityLabel: UILabel!
     
-    @IBOutlet weak var bookImageView: UIImageView!
+    @IBOutlet private weak var bookImageView: UIImageView!
     
     func setup(with viewModel: BookViewModel){
         nameLabel.text = viewModel.name()
