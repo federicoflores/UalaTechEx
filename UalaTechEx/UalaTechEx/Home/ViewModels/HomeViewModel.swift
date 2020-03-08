@@ -23,7 +23,7 @@ class HomeViewModel {
         ualaProvider.retrieveBook(completion: completion, fail: fail)
     }
     
-    func getBooksAndUpdateView(updateView: @escaping ()->()){
+    func getBooksAndUpdateView(updateView: @escaping ()->(), updateFailView: @escaping ()->()){
         fetchBooks(completion: { (books) in
             self.auxAllBooks = books
             self.books = self.auxAllBooks
@@ -32,7 +32,7 @@ class HomeViewModel {
             updateView()
         }, fail: { (fail) in
             print(fail)
-            updateView()
+            updateFailView()
         })
     }
     

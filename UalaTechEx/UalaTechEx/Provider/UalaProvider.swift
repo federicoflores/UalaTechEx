@@ -23,7 +23,6 @@ class UalaProvider {
                     completion(model)
                 }
             case .failure(let error):
-                print(error.localizedDescription)
                 fail(error.localizedDescription)
             }
         }

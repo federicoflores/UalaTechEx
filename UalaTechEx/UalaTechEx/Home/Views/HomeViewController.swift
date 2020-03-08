@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet private weak var booksTableView: UITableView!
     
+    @IBOutlet weak var errorLabel: UILabel!
     var viewModel: HomeViewModel?
     var spiner: SpinnerView?
     var router: HomeRouter?
@@ -31,11 +32,16 @@ class HomeViewController: UIViewController {
         
         guard let vm = viewModel else { return }
         router = HomeRouter(with: vm)
-        vm.getBooksAndUpdateView {
+        vm.getBooksAndUpdateView(updateView: {
             self.spiner?.stop()
             self.booksTableView.isHidden = false
             self.booksTableView.reloadData()
+        }, updateFailView: {
+            self.spiner?.stop()
+            self.booksTableView.isHidden = true
+            self.errorLabel.isHidden = false
         }
+        )
     }
     
     @objc private func sortByPopularityTapped(){

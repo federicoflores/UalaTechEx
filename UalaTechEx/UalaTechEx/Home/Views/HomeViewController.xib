@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="UalaTechEx" customModuleProvider="target">
             <connections>
                 <outlet property="booksTableView" destination="Dba-Zd-imI" id="te4-KP-Egf"/>
+                <outlet property="errorLabel" destination="ZzQ-VK-yWo" id="am6-YB-smp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,6 +22,12 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ha ocurrido un problema. Por favor inténtelo nuevamente más tarde." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZzQ-VK-yWo">
+                    <rect key="frame" x="10" y="288.5" width="355" height="90"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dba-Zd-imI">
                     <rect key="frame" x="0.0" y="80" width="375" height="587"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -74,16 +81,20 @@
                 <constraint firstItem="Dba-Zd-imI" firstAttribute="top" secondItem="JPf-8b-Nki" secondAttribute="bottom" id="44J-CJ-1tc"/>
                 <constraint firstItem="Dba-Zd-imI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6to-VZ-HLB"/>
                 <constraint firstItem="Dba-Zd-imI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="60" id="Dih-AZ-BLL"/>
+                <constraint firstAttribute="trailing" secondItem="ZzQ-VK-yWo" secondAttribute="trailing" constant="10" id="FcX-dT-QOf"/>
                 <constraint firstItem="SXq-O6-B6Z" firstAttribute="centerY" secondItem="C87-P4-8O0" secondAttribute="centerY" id="Lcr-yh-MF7"/>
                 <constraint firstItem="kLW-br-dCf" firstAttribute="centerY" secondItem="SXq-O6-B6Z" secondAttribute="centerY" id="QAz-IC-8g7"/>
                 <constraint firstItem="C87-P4-8O0" firstAttribute="centerY" secondItem="1wp-lE-dJz" secondAttribute="centerY" id="QLE-mZ-fxQ"/>
                 <constraint firstItem="SXq-O6-B6Z" firstAttribute="leading" secondItem="C87-P4-8O0" secondAttribute="trailing" constant="20" id="S1a-IN-Jg8"/>
+                <constraint firstItem="ZzQ-VK-yWo" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="UkW-R0-Kky"/>
                 <constraint firstItem="C87-P4-8O0" firstAttribute="leading" secondItem="1wp-lE-dJz" secondAttribute="trailing" constant="5" id="ZWC-AW-6zn"/>
                 <constraint firstItem="1wp-lE-dJz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="ZgL-wX-2bT"/>
                 <constraint firstItem="kLW-br-dCf" firstAttribute="leading" secondItem="SXq-O6-B6Z" secondAttribute="trailing" constant="20" id="j5p-A7-rym"/>
                 <constraint firstItem="JPf-8b-Nki" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="n3s-is-r2m"/>
+                <constraint firstItem="ZzQ-VK-yWo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rYK-xs-3Tv"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dba-Zd-imI" secondAttribute="trailing" id="t23-gA-5lq"/>
                 <constraint firstItem="Dba-Zd-imI" firstAttribute="top" secondItem="1wp-lE-dJz" secondAttribute="bottom" constant="20" id="tJJ-be-s6X"/>
+                <constraint firstItem="ZzQ-VK-yWo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="urG-n9-Q7c"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="52" y="104.7976011994003"/>
