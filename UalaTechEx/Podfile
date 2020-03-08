@@ -8,6 +8,8 @@ target 'UalaTechEx' do
   # Pods for UalaTechEx
 
     pod 'Alamofire'
+    pod 'Kingfisher'
+
 
   target 'UalaTechExTests' do
     inherit! :search_paths

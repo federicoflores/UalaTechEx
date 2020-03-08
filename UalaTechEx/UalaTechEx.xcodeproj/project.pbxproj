@@ -19,6 +19,14 @@
 		CAD1C7702415899500F096C0 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD1C76E2415899500F096C0 /* HomeViewController.xib */; };
 		CAD1C772241589E500F096C0 /* UalaProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1C771241589E500F096C0 /* UalaProvider.swift */; };
 		CAD1C77424158D3300F096C0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1C77324158D3300F096C0 /* HomeViewModel.swift */; };
+		CAD1C77B24158F1000F096C0 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1C77924158F1000F096C0 /* BookTableViewCell.swift */; };
+		CAD1C77C24158F1000F096C0 /* BookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD1C77A24158F1000F096C0 /* BookTableViewCell.xib */; };
+		CAD1C77E2415903300F096C0 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1C77D2415903300F096C0 /* HomeRouter.swift */; };
+		CAD1C7862415986A00F096C0 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1C7852415986A00F096C0 /* BookViewModel.swift */; };
+		CAD1C78A24159CD500F096C0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1C78824159CD500F096C0 /* DetailViewController.swift */; };
+		CAD1C78B24159CD500F096C0 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAD1C78924159CD500F096C0 /* DetailViewController.xib */; };
+		CAD1C78D24159CE400F096C0 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1C78C24159CE400F096C0 /* DetailViewModel.swift */; };
+		CAD1C79024159E7800F096C0 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD1C78F24159E7800F096C0 /* Spinner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +58,14 @@
 		CAD1C76E2415899500F096C0 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		CAD1C771241589E500F096C0 /* UalaProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UalaProvider.swift; sourceTree = "<group>"; };
 		CAD1C77324158D3300F096C0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CAD1C77924158F1000F096C0 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
+		CAD1C77A24158F1000F096C0 /* BookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookTableViewCell.xib; sourceTree = "<group>"; };
+		CAD1C77D2415903300F096C0 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		CAD1C7852415986A00F096C0 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
+		CAD1C78824159CD500F096C0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CAD1C78924159CD500F096C0 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		CAD1C78C24159CE400F096C0 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		CAD1C78F24159E7800F096C0 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		E3A7C88D54E3E11B8BE789AC /* Pods-UalaTechEx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UalaTechEx.release.xcconfig"; path = "Pods/Target Support Files/Pods-UalaTechEx/Pods-UalaTechEx.release.xcconfig"; sourceTree = "<group>"; };
 		E73D8ACF41892391B05AB38A /* Pods_UalaTechExTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UalaTechExTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -117,16 +133,16 @@
 		CAD1C74A2415828F00F096C0 /* UalaTechEx */ = {
 			isa = PBXGroup;
 			children = (
+				CAD1C78E24159E6700F096C0 /* Utils */,
+				CAD1C78724159CBE00F096C0 /* Detail */,
+				CAD1C7842415985900F096C0 /* Provider */,
+				CAD1C7832415984B00F096C0 /* Models */,
+				CAD1C77F2415981700F096C0 /* Home */,
 				CAD1C74B2415828F00F096C0 /* AppDelegate.swift */,
 				CAD1C74F2415828F00F096C0 /* Main.storyboard */,
 				CAD1C7522415829100F096C0 /* Assets.xcassets */,
 				CAD1C7542415829100F096C0 /* LaunchScreen.storyboard */,
 				CAD1C7572415829100F096C0 /* Info.plist */,
-				CAD1C76B241587E400F096C0 /* Book.swift */,
-				CAD1C76D2415899500F096C0 /* HomeViewController.swift */,
-				CAD1C76E2415899500F096C0 /* HomeViewController.xib */,
-				CAD1C771241589E500F096C0 /* UalaProvider.swift */,
-				CAD1C77324158D3300F096C0 /* HomeViewModel.swift */,
 			);
 			path = UalaTechEx;
 			sourceTree = "<group>";
@@ -138,6 +154,78 @@
 				CAD1C7622415829100F096C0 /* Info.plist */,
 			);
 			path = UalaTechExTests;
+			sourceTree = "<group>";
+		};
+		CAD1C77F2415981700F096C0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CAD1C7822415984000F096C0 /* Router */,
+				CAD1C7812415983300F096C0 /* ViewModels */,
+				CAD1C7802415981D00F096C0 /* Views */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CAD1C7802415981D00F096C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CAD1C77924158F1000F096C0 /* BookTableViewCell.swift */,
+				CAD1C77A24158F1000F096C0 /* BookTableViewCell.xib */,
+				CAD1C76D2415899500F096C0 /* HomeViewController.swift */,
+				CAD1C76E2415899500F096C0 /* HomeViewController.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CAD1C7812415983300F096C0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CAD1C77324158D3300F096C0 /* HomeViewModel.swift */,
+				CAD1C7852415986A00F096C0 /* BookViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CAD1C7822415984000F096C0 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CAD1C77D2415903300F096C0 /* HomeRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CAD1C7832415984B00F096C0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CAD1C76B241587E400F096C0 /* Book.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CAD1C7842415985900F096C0 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				CAD1C771241589E500F096C0 /* UalaProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		CAD1C78724159CBE00F096C0 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CAD1C78824159CD500F096C0 /* DetailViewController.swift */,
+				CAD1C78924159CD500F096C0 /* DetailViewController.xib */,
+				CAD1C78C24159CE400F096C0 /* DetailViewModel.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		CAD1C78E24159E6700F096C0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CAD1C78F24159E7800F096C0 /* Spinner.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,9 +313,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAD1C7562415829100F096C0 /* LaunchScreen.storyboard in Resources */,
+				CAD1C78B24159CD500F096C0 /* DetailViewController.xib in Resources */,
 				CAD1C7532415829100F096C0 /* Assets.xcassets in Resources */,
 				CAD1C7512415828F00F096C0 /* Main.storyboard in Resources */,
 				CAD1C7702415899500F096C0 /* HomeViewController.xib in Resources */,
+				CAD1C77C24158F1000F096C0 /* BookTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,12 +341,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-UalaTechEx/Pods-UalaTechEx-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -314,10 +406,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAD1C79024159E7800F096C0 /* Spinner.swift in Sources */,
+				CAD1C78A24159CD500F096C0 /* DetailViewController.swift in Sources */,
 				CAD1C74C2415828F00F096C0 /* AppDelegate.swift in Sources */,
 				CAD1C76C241587E500F096C0 /* Book.swift in Sources */,
+				CAD1C78D24159CE400F096C0 /* DetailViewModel.swift in Sources */,
+				CAD1C77E2415903300F096C0 /* HomeRouter.swift in Sources */,
 				CAD1C76F2415899500F096C0 /* HomeViewController.swift in Sources */,
 				CAD1C77424158D3300F096C0 /* HomeViewModel.swift in Sources */,
+				CAD1C7862415986A00F096C0 /* BookViewModel.swift in Sources */,
+				CAD1C77B24158F1000F096C0 /* BookTableViewCell.swift in Sources */,
 				CAD1C772241589E500F096C0 /* UalaProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
